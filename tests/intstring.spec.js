@@ -13,10 +13,18 @@ describe('int + string', function() {
   }
 
   beforeEach(async function() {
-    const chrome = require('selenium-webdriver/chrome');
-    const options = new chrome.Options();
-    options.addArguments('--headless', '--no-sandbox', '--disable-dev-shm-usage');
-    driver = await new Builder().forBrowser('chrome').setChromeOptions(options).build();
+    const browser = process.env.BROWSER || 'chrome';
+    if (browser === 'chrome') {
+      const chrome = require('selenium-webdriver/chrome');
+      const options = new chrome.Options();
+      options.addArguments('--headless', '--no-sandbox', '--disable-dev-shm-usage');
+      driver = await new Builder().forBrowser('chrome').setChromeOptions(options).build();
+    } else if (browser === 'firefox') {
+      const firefox = require('selenium-webdriver/firefox');
+      const options = new firefox.Options();
+      options.addArguments('--headless');
+      driver = await new Builder().forBrowser('firefox').setFirefoxOptions(options).build();
+    }
     vars = {};
   });
 
