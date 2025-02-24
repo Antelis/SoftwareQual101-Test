@@ -15,7 +15,7 @@ describe('Calculator Tests', function () {
 
   beforeEach(async function () {
     //Configure browser options (Chrome headless or Firefox)
-    const browser = process.env.BROWSER || 'firefox'; // Default to firefox
+    const browser = process.env.BROWSER || 'chrome'; // Default to firefox
 
     if (browser === 'chrome') {
       const chrome = require('selenium-webdriver/chrome');
