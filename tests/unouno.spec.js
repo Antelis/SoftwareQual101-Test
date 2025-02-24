@@ -46,7 +46,7 @@ describe('1 + 1', function () {
 
   it('1 + 1', async function () {
     // Navigate to the application
-    await driver.get('http://[::1]:8000/');
+    await driver.get('http://localhost:8000/');
     await driver.manage().window().setRect({ width: 550, height: 693 });
 
     // Enter 1 in the first input field
@@ -67,7 +67,7 @@ describe('1 + 1', function () {
 
   it('Invalid input: 1 + "hi"', async function () {
     // Navigate to the application
-    await driver.get('localhost:8000/');
+    await driver.get('http://localhost:8000/');
     await driver.manage().window().setRect({ width: 550, height: 693 });
 
     // Enter 1 in the first input field
