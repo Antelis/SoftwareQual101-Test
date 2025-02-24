@@ -63,7 +63,7 @@ describe('1000 + 1000', function () {
   });
 
   it('12 + (-10)', async function () {
-    await driver.get('http://[::1]:8000/');
+    await driver.get('http://localhost:8000/');
     await driver.manage().window().setRect({ width: 550, height: 693 });
 
     // Enter 12 in the first input field
