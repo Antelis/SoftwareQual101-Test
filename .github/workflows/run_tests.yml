@@ -23,7 +23,7 @@ jobs:
             sleep 10 &&
             curl http://localhost:8000
             cd ..
-            cd tests
+            cd tests2
             npm install
             ./node_modules/.bin/mocha *.js
       - uses: actions/upload-artifact@v4
