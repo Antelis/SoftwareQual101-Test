@@ -45,7 +45,7 @@ describe('10 - 6', function () {
   });
 
   it('10 - 6', async function () {
-    await driver.get('http://[::1]:8000/');
+    await driver.get('http://localhost:8000/');
     await driver.manage().window().setRect({ width: 550, height: 693 });
     await driver.findElement(By.id('num1')).click();
     await driver.findElement(By.id('num1')).sendKeys('10');
