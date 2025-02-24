@@ -13,7 +13,7 @@ describe('int + string', function() {
   }
 
   beforeEach(async function() {
-    const browser = process.env.BROWSER || 'firefox';
+    const browser = process.env.BROWSER || 'chrome';
     if (browser === 'chrome') {
       const chrome = require('selenium-webdriver/chrome');
       const options = new chrome.Options();
