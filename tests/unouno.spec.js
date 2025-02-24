@@ -52,16 +52,20 @@ describe('1 + 1', function () {
     // Enter 1 in the first input field
     await driver.findElement(By.id('num1')).click();
     await driver.findElement(By.id('num1')).sendKeys('1');
+    console.log('Entered 1 in the first input field');
 
     // Enter 1 in the second input field
     await driver.findElement(By.id('num2')).click();
     await driver.findElement(By.id('num2')).sendKeys('1');
+    console.log('Entered 1 in the second input field');
 
     // Click the addition button (assuming it's the first button)
     await driver.findElement(By.css('button:nth-child(1)')).click();
+    console.log('Clicked the addition button');
 
     // Verify the result (assuming the result is displayed in an element with id 'result')
     const result = await driver.findElement(By.id('result')).getText();
+    console.log('Result:', result);
     assert.strictEqual(result, '2', 'Expected 1 + 1 to equal 2');
   });
 });
