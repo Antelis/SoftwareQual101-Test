@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://[::1]:8000/")
 @RestController
 @RequestMapping("/api")
 public class CalculatorController {
@@ -17,5 +18,4 @@ public class CalculatorController {
         int result = num1 - num2;
         return new Calculator(String.valueOf(result));
     }
-
 }
