@@ -2,7 +2,7 @@ package com.example.calculator;
 
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://[::1]:8000/")
+@CrossOrigin(origins = "http://localhost:8080/")
 @RestController
 @RequestMapping("/api")
 public class CalculatorController {
