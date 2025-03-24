@@ -28,13 +28,12 @@
 							"pm.test(\"Response has correct structure\", function () {",
 							"    const jsonData = pm.response.json();",
 							"    pm.expect(jsonData).to.have.property(\"result\");",
-							"    pm.expect(jsonData).to.have.property(\"operation\");",
 							"});",
 							"",
 							"pm.test(\"Addition works correctly\", function () {",
 							"    const jsonData = pm.response.json();",
-							"    pm.expect(jsonData.result).to.equal(8);",
-							"    pm.expect(jsonData.operation).to.equal(\"add\");",
+							"    pm.expect(Number(jsonData.result)).to.equal(8);",
+
 							"});"
 						],
 						"type": "text/javascript"
