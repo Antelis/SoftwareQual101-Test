@@ -18,4 +18,8 @@ public class CalculatorController {
         int result = num1 - num2;
         return new Calculator(String.valueOf(result));
     }
+    @GetMapping("/")
+    public String home() {
+        return "Calculator home page";
+    }
 }
